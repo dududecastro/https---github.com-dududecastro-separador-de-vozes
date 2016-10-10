@@ -12,5 +12,5 @@
   <author href="http://dududecastro.com" email="contato@dududecastro.com">
       Eduardo Castro
   </author>
-  <icon src="icon.png">
+  <icon src="icon.png" />
 </widget>
