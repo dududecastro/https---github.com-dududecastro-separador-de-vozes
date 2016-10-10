@@ -1,0 +1,88 @@
+html {
+	font-family: 'Oxygen', sans-serif;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7720a3+0,f76d60+100 */
+background: #7720a3; /* Old browsers */
+background: -moz-linear-gradient(45deg, #7720a3 0%, #f76d60 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #7720a3 0%,#f76d60 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #7720a3 0%,#f76d60 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7720a3', endColorstr='#f76d60',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+color: #FFF;
+}
+.descricao {
+margin:-10px auto 30px auto;
+font-size:11px;
+max-width:80%;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#resultados h3 {
+    margin-bottom: 0;
+}
+h1 {
+    line-height: 30px;
+}
+input, select {
+    max-width: 100%;
+    background: transparent;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 20px;
+    border: 2px solid #FFF;
+    text-align: center;
+    width: 300px;
+    outline: none;
+}
+textarea {
+    max-width: 100%;
+    background: transparent;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    padding: 25px;
+    font-size: 18px;
+	font-family: 'Oxygen', sans-serif;
+	color: #FFF;
+	outline: none;
+}
+
+button {
+    background: #ff9a33;
+    color: #FFF;
+    border: 0;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 18px;
+    cursor: pointer;
+    margin: 10px 0;
+    outline: none;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+	color: #FFF;
+	opacity: 0.7;
+}
+
+:-moz-placeholder {
+	color: #FFF;
+	opacity: 0.7;
+}
+.escalas {
+    margin: 5px 0 10px 0;
+}
+.escalas div {
+    font-size: 12px;
+    margin: 5px 0;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+option {
+    color: #000;
+}
