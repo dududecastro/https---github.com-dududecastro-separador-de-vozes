@@ -15,7 +15,7 @@
 		<form action="">
 			<div id="pergunta" style="display:block;">
 				<h2>Escolha o tom da música</h2>
-				<select id="tomdamusica" required>
+				<select id="tomdamusica" required onclick="displayScale()">
 					<option value="C">C</option>
 					<option value="C#">C#</option>
 					<option value="D">D</option>
@@ -29,12 +29,15 @@
 					<option value="A#">A#</option>
 					<option value="B">B</option>
 				</select>
+				<p id="displayescala">C - D - E - F - G - A - B</p>
 				<!-- A ideia é poder colocar o tom da música no formato de cifra (letras) -->
 				<h2>Coloque a primeira voz</h2>
 				<textarea name="notasmusica" id="notasmusica" cols="30" rows="5" placeholder="Coloque a cifra das notas, ex.: (C D E F F F)" onchange='f3(this);'></textarea>
 				<!-- Aqui a ideia é colocar um conjunto de notas no formato "C A B D# E" por exemplo, podendo ou não conter espaços e enters. -->
 				<br>	
-				<button type="button" onclick="displayScale()">Separas Vozes</button>
+				<ul id="tecladoNotas">
+				</ul>
+				<button type="button" onclick="convertScale()">Separas Vozes</button>
 				<!-- Depois de clicar, o desejado é exibir as notas convertidas pra Terça e pra Quinta, mantendo o formato de letras -->
 			</div>
 			<div id="resultados" style="display:none;">

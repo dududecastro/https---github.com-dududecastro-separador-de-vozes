@@ -86,3 +86,30 @@ h2 {
 option {
     color: #000;
 }
+#displayescala {
+    max-width: 260px;
+    margin: 10px auto;
+    background: rgba(0, 0, 0, 0.26);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+
+#tecladoNotas {
+    max-width: 360px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+#tecladoNotas li {
+    padding: 11px 16px;
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 12px;
+}
+#tecladoNotas li:hover {
+    background: rgba(0, 0, 0, 0.5);
+}

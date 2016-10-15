@@ -28,26 +28,45 @@ function displayScale() {
 		if ($minhanota == 'A') {$minhanota = 21;}
 		if ($minhanota == 'A#' || $minhanota == 'Bb') {$minhanota = 22;}
 		if ($minhanota == 'B') {$minhanota = 23;}
+			
 	var $scale = [
 	// Definição do intervalo da escala maior
-	items[$minhanota],
-	items[$minhanota + $tom],
-	items[$minhanota + $tom + $tom],
-	items[$minhanota + $tom + $tom + $semitom],
-	items[$minhanota + $tom + $tom + $semitom + $tom],
-	items[$minhanota + $tom + $tom + $semitom + $tom + $tom],
-	items[$minhanota + $tom + $tom + $semitom + $tom + $tom + $tom]
+		items[$minhanota],
+		items[$minhanota + $tom],
+		items[$minhanota + $tom + $tom],
+		items[$minhanota + $tom + $tom + $semitom],
+		items[$minhanota + $tom + $tom + $semitom + $tom],
+		items[$minhanota + $tom + $tom + $semitom + $tom + $tom],
+		items[$minhanota + $tom + $tom + $semitom + $tom + $tom + $tom]
 	];
+	var $scaleMenor = [
+	// Definição do intervalo da escala menor
+		items[$minhanota],
+		items[$minhanota + $tom],
+		items[$minhanota + $tom + $semitom],
+		items[$minhanota + $tom + $semitom + $tom],
+		items[$minhanota + $tom + $semitom + $tom + $tom],
+		items[$minhanota + $tom + $semitom + $tom + $tom + $semitom],
+		items[$minhanota + $tom + $semitom + $tom + $tom + $semitom + $tom]
+	];	
 
 	// Definição da Primeira voz, Terça e Quinta.
 	var $primeira = $scale;
 	var $terca = $scale.slice(2, 7).concat($scale.slice(0, 2));
 	var $quinta = $scale.slice(4, 7).concat($scale.slice(0, 4));
 
-	document.getElementById("notas-resultado").innerHTML = $primeira;
-	document.getElementById("notas-resultado2").innerHTML = $terca;
-	document.getElementById("notas-resultado3").innerHTML = $quinta;
+	document.getElementById("displayescala").innerHTML = $primeira.join(" - ");
+	document.getElementById("notas-resultado").innerHTML = $primeira.join(" - ");
+	document.getElementById("notas-resultado2").innerHTML = $terca.join(" - ");
+	document.getElementById("notas-resultado3").innerHTML = $quinta.join(" - ");
 
+
+
+	document.getElementById("tecladoNotas").innerHTML = '<li>' + $primeira.join("</li><li>") + '</li><li class="deleteNote">◁</li>';
+
+}
+
+function convertScale() {
 	// Conversão de vozes notas por notas
 	var $notasmusica = document.getElementById("notasmusica").value.split(/\s+/g);
 
@@ -75,4 +94,8 @@ function backToReality() {
 }
 function f3(ta) {
     ta.value = ta.value.toUpperCase();
+}
+
+function digitaNota() {
+
 }
