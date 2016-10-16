@@ -1,5 +1,5 @@
 html {
-	font-family: 'Oxygen', sans-serif;
+	font-family: Arial, sans-serif;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7720a3+0,f76d60+100 */
 background: #7720a3; /* Old browsers */
 background: -moz-linear-gradient(45deg, #7720a3 0%, #f76d60 100%); /* FF3.6-15 */
@@ -57,8 +57,9 @@ button {
     font-weight: bold;
     border-radius: 18px;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 10px 5px;
     outline: none;
+    max-height: 51px;
 }
 h2 {
     text-transform: uppercase;
@@ -86,13 +87,6 @@ h2 {
 option {
     color: #000;
 }
-#displayescala {
-    max-width: 260px;
-    margin: 10px auto;
-    background: rgba(0, 0, 0, 0.26);
-    border-radius: 30px;
-    padding: 5px;
-}
 
 
 #tecladoNotas {
@@ -112,4 +106,66 @@ option {
 }
 #tecladoNotas li:hover {
     background: rgba(0, 0, 0, 0.5);
+}
+.maiormenor label {
+    cursor: pointer;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.17);
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 14px;
+}
+.label-maior {
+    border-radius: 8px 0 0 8px;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+.label-menor {
+    border-radius: 0 8px 8px 0;
+}
+.maiormenor #maior:checked ~ label[for=maior],
+.maiormenor #menor:checked ~ label[for=menor]{
+    background: #ff9a33;
+}
+#tomdamusica {
+    margin: 0 auto;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 8px;
+}
+#tomdamusica label {
+    width: calc(100% / 3);
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+#tomdamusica #C:checked ~ label[for=C],
+#tomdamusica #Db:checked ~ label[for=Db],
+#tomdamusica #D:checked ~ label[for=D],
+#tomdamusica #Eb:checked ~ label[for=Eb],
+#tomdamusica #E:checked ~ label[for=E],
+#tomdamusica #F:checked ~ label[for=F],
+#tomdamusica #Gb:checked ~ label[for=Gb],
+#tomdamusica #G:checked ~ label[for=G],
+#tomdamusica #Ab:checked ~ label[for=Ab],
+#tomdamusica #A:checked ~ label[for=A],
+#tomdamusica #Bb:checked ~ label[for=Bb],
+#tomdamusica #B:checked ~ label[for=B]{
+    background: #ff9a33;
+}
+
+.notamenor {
+    display: none;
+}
+.btn-group {
+    display: flex;
+    max-width: 360px;
+    margin: 0 auto;
+    justify-content: center;
 }
