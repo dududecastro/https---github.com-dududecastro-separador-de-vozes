@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="css/style.css">
 		<icon src="icon.png" />
 	</head>
-	<body onload="initBody()">
+	<body>
 		<div class="container">
-		<h1>Separador de Vozes</h1>
+		<h1>♪ Separador de Vozes ♪</h1>
 		<p class="descricao">Separe as vozes das suas músicas colocando o tom da música e a cifra da primeira voz nos campos abaixo.</p>
 		<form action="" name="conversordenotas">
 			<div id="pergunta" style="display:block;">
@@ -42,7 +42,7 @@
 				</div>
 				<div class="maiormenor"><input type="radio" name="radiomaiormenor" id="maior" style="display:none;" value="1" checked><input type="radio" name="radiomaiormenor" id="menor" style="display:none;" value="2"><label for="maior" class="label-maior action" onclick="Maior()">Maior</label><label for="menor" class="label-menor action" onclick="Menor()">Menor</label></div>
 
-				<button type="button" onclick="vaiPraColoca()">Inserir Notas</button>
+				<button type="button" onclick="vaiPraColoca()">♫ Inserir Notas</button>
 			</div>
 			<div id="colocanotas" style="display:none;">
 				<!-- A ideia é poder colocar o tom da música no formato de cifra (letras) -->
@@ -53,37 +53,46 @@
 				<ul id="tecladoNotas">
 				</ul>
 				<div class="btn-group">
-					<button type="button" onclick="backToReality1()">◁</button>
-					<button type="button" onclick="convertScale()">Separas Vozes</button>
+					<button type="button" onclick="backToReality1()">◄</button>
+					<button type="button" onclick="convertScale()">♫ Separas Vozes</button>
 				</div>
 				<!-- Depois de clicar, o desejado é exibir as notas convertidas pra Terça e pra Quinta, mantendo o formato de letras -->
 			</div>
 			<div id="resultados" style="display:none;">
 				<div>
-					<h3>Primeira:</h3>
-					<div class="escalas">
-						<div>Escala da 1ª voz: <span id="notas-resultado"></span></div>
+					<h3>1ª VOZ</h3>
+					<div class="escalas escalas1" style="display:none;">
+						<div>Escala: <span id="notas-resultado"></span></div>
 					</div>
-					<textarea id="notasmusicas-resultados-primeira" cols="30" rows="5"></textarea>
+					<div class="transpor">
+						<span id="qualvoz1Bb" onclick="Bb1()">TRANSPOR (Bb)</span>
+					</div>
+					<textarea id="notasmusicas-resultados-primeira" cols="32" rows="5"></textarea>
 				</div>
 				<div>
-					<h3>Terça:</h3>
-					<div class="escalas">
-						<div>Escala da 2ª voz: <span id="notas-resultado2"></span></div>
+					<h3>2ª VOZ</h3>
+					<div class="escalas escalas2" style="display:none;">
+						<div>Escala: <span id="notas-resultado2"></span></div>
 					</div>
-					<textarea id="notasmusicas-resultados-terca" cols="30" rows="5"></textarea>
+					<div class="transpor">
+						<span id="qualvoz2Bb" onclick="Bb2()">TRANSPOR (Bb)</span>
+					</div>
+					<textarea id="notasmusicas-resultados-terca" cols="32" rows="5"></textarea>
 				</div>
 				<div>
-					<h3>Quinta:</h3>
-					<div class="escalas">
-						<div>Escala da 3ª voz: <span id="notas-resultado3"></span></div>
+					<h3>3ª VOZ</h3>
+					<div class="escalas escalas3" style="display:none;">
+						<div>Escala: <span id="notas-resultado3"></span></div>
 					</div>
-					<textarea id="notasmusicas-resultados-quinta" cols="30" rows="5"></textarea>
+					<div class="transpor">
+						<span id="qualvoz3Bb" onclick="Bb3()">TRANSPOR (Bb)</span>
+					</div>
+					<textarea id="notasmusicas-resultados-quinta" cols="32" rows="5"></textarea>
 				</div>
 				<br>
 				<div class="btn-group">
-					<button type="button" onclick="backToReality2()">◁</button>
-					<button type="button" onclick="resetToReality()">Reiniciar</button>
+					<button type="button" onclick="backToReality2()">◄</button>
+					<button type="button" onclick="resetToReality()">⟲ Reiniciar</button>
 				</div>
 			</div>
 		</form>
