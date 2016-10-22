@@ -15,22 +15,24 @@ function displayScale() {
 	window.ResultadoQuinta.innerHTML = "";
 
 	window.minhanota = document.conversordenotas.tomdamusica;
+
+	console.log(minhanota.value);
 		
 	var i;
     for (var i = 0; i < minhanota.length; i++) {
         if (minhanota[i].checked) {
 			// Conversor tosco de letras pra índice do array de notas
 			if (minhanota.value === 'C') {minhanota = 12;}
-			if (minhanota.value === 'Db') {minhanota = 13;}
+			if (minhanota.value === 'Db' || minhanota.value === 'C#') {minhanota = 13;}
 			if (minhanota.value === 'D') {minhanota = 14;}
-			if (minhanota.value === 'Eb') {minhanota = 15;}
+			if (minhanota.value === 'Eb' || minhanota.value === 'D#') {minhanota = 15;}
 			if (minhanota.value === 'E') {minhanota = 16;}
 			if (minhanota.value === 'F') {minhanota = 17;}
-			if (minhanota.value === 'Gb') {minhanota = 18;}
+			if (minhanota.value === 'Gb' || minhanota.value === 'F#') {minhanota = 18;}
 			if (minhanota.value === 'G') {minhanota = 19;}
-			if (minhanota.value === 'Ab') {minhanota = 20;}
+			if (minhanota.value === 'Ab' || minhanota.value === 'G#') {minhanota = 20;}
 			if (minhanota.value === 'A') {minhanota = 21;}
-			if (minhanota.value === 'Bb') {minhanota = 22;}
+			if (minhanota.value === 'Bb' || minhanota.value === 'A#') {minhanota = 22;}
 			if (minhanota.value === 'B') {minhanota = 23;}
 		}
     }
@@ -125,7 +127,7 @@ function backToReality2() {
 
 }
 function f3(ta) {
-    ta.value = ta.value.toUpperCase();
+    ta.value = ta.value.replace(/(^|\s)[a-z]/g,function(f){return f.toUpperCase();});
 }
 
 function digitaNota() {
